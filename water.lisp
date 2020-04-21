@@ -6,7 +6,7 @@
      (lambda ()
        ,@b
        (when (@ this ctor)
-         (chain this (ctor arguments)))
+         (chain this ctor (apply this arguments)))
        this)))
 
 (defpsmacro defwctor (args &rest b)
